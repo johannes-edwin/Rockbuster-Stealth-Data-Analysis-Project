@@ -1,0 +1,11 @@
+# 1. Create a summary table from the results of the loyalty flag value_counts
+loyalty_summary = df_active['loyalty_flag'].value_counts(dropna=False).reset_index()
+
+# 2. Naming columns to keep things neat when imported into Tableau
+loyalty_summary.columns = ['loyalty_flag', 'total_orders_or_customers']
+
+# 3. Ekspor ke CSV kecil (hanya 3 baris data)
+loyalty_summary.to_csv(os.path.join(path, '02 Data', 'Prepared Data', 'loyalty_distribution_summary_GitHub.csv'), index=False)
+
+print("File 'loyalty_distribution_summary.csv' success created!")
+print(loyalty_summary)
