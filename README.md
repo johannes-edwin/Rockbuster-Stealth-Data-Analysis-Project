@@ -32,7 +32,7 @@ Finally, the data analyst needs to understand GitHub. Not only is GitHub the sta
 
 # Visualization
 
-[Lihat Visualisasi Interaktif di Tableau Public](https://public.tableau.com/app/profile/johannes.wuisan/viz/RockbusterDistributionofAgeProfiles/Sheet1?publish=yes)
+[Rockbuster Distribution of Age Profiles](https://public.tableau.com/app/profile/johannes.wuisan/viz/RockbusterDistributionofAgeProfiles/Sheet1?publish=yes)
 
 
 
