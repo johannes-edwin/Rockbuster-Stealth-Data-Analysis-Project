@@ -1,0 +1,29 @@
+# 8.1 Crosstab between Household Profile and Region
+profile_region_ct = pd.crosstab(df_active['household_profile'], df_active['Region'], dropna = False)
+
+# Result
+profile_region_ct
+
+
+# Graphics
+
+# 1. Do transpose (.T) so that Region to be (Axis X) and Household Profile to be legend (colour)
+region_profile_bar_v2 = profile_region_ct.T.plot(kind='bar', 
+                                                 stacked=True, 
+                                                 figsize=(12, 8),
+                                                 color=['#4b0082', '#ff4500', '#ff69b4', '#00ced1', '#ffd700', '#32cd32'])
+
+# 2. Title and Label
+plt.title('Distribution of Region by Household Profile', fontsize=16)
+plt.legend(title='Household Profile', bbox_to_anchor=(1.05, 1), loc='upper left')
+plt.xlabel('Region', fontsize=12)
+plt.ylabel('Number of Orders', fontsize=12)
+plt.xticks(rotation=0) # Region usually shorter, so no need italic
+
+# 3. Save Graph before  plt.show)
+plt.tight_layout()
+plt.savefig(os.path.join(path, '04 Analysis', 'Visualizations', 'Tableau_region_by_profile_stacked.png'), 
+            bbox_inches='tight', dpi=300)
+
+# 4. Show grapph
+plt.show()
