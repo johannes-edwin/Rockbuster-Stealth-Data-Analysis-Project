@@ -1,0 +1,33 @@
+# Make Crosstab
+
+crosstab_regional_spending = pd.crosstab(df['Region'], df['spender_flag'], dropna = False)
+print("Distribution of Expenditure Types (Spender Flag) per Region:")
+print(crosstab_regional_spending)
+
+
+# Counting the 'spender_flag'.
+
+df['spender_flag'].value_counts(dropna = False)
+
+
+# Copying crosstab to clipboard to open in Excel
+
+crosstab_regional_spending.to_clipboard()
+
+
+# Graphic
+
+bar_reg_spending = crosstab_regional_spending.plot(kind="bar", color = ['green', 'red'] )
+
+# Title 
+plt.title ('Regional Spending')
+
+# Rotating labels for better readability 
+plt.xlabel ('Region')
+plt.xticks(rotation=45)
+
+# Y-axis label is in scientific notation (1e7 is actually 10 million) so it is showing raw counts. 
+plt.ylabel ('Count of Customers (in millions)')
+
+# Layout
+plt.tight_layout()
