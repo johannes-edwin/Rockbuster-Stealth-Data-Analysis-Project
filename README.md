@@ -38,7 +38,7 @@ Finally, the data analyst needs to understand GitHub. Not only is GitHub the sta
 
 [Rockbuster Distribution of Household](https://public.tableau.com/app/profile/johannes.wuisan/viz/RockbusterDistributionofHouseholdPublic/Sheet1?publish=yes)
 
-
+[Rockbuster Distribution of Customer Loyalty](https://public.tableau.com/app/profile/johannes.wuisan/viz/RockbusterDistributionofCustomerLoyalty/Sheet1?publish=yes)
 
 
 
