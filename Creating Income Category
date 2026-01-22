@@ -1,0 +1,8 @@
+# 5.2 Creating Income Categories (New Version)
+df_active.loc[df_active['income'] < 40000, 'income_profile'] = 'Low Income'
+df_active.loc[(df_active['income'] >= 40000) & (df_active['income'] <= 120000), 'income_profile'] = 'Mid Income'
+df_active.loc[df_active['income'] > 120000, 'income_profile'] = 'High Income'
+
+# Verifikasi hasilnya
+print("New Income Profile Distribution:")
+print(df_active['income_profile'].value_counts(dropna = False))
