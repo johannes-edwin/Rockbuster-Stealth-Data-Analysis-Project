@@ -1,0 +1,26 @@
+# 5.3 Creating a Household Profile using .loc
+
+# 1. Married - No Kids (If any in the data)
+df_active.loc[(df_active['status'] == 'married') & (df_active['dependant'] == 0), 'household_profile'] = 'Married - No Kids'
+
+# 2. Small Family (Married with 1-2 children)
+df_active.loc[(df_active['status'] == 'married') & (df_active['dependant'] >= 1) & (df_active['dependant'] <= 2), 'household_profile'] = 'Small Family'
+
+# 3. Large Family (Married with 3 children)
+df_active.loc[(df_active['status'] == 'married') & (df_active['dependant'] >= 3), 'household_profile'] = 'Large Family'
+
+# 4. Single Adult (Single/Divorced/Widowed without children)
+df_active.loc[((df_active['status'] == 'single') | (df_active['status'] == 'divorced/widowed')) & (df_active['dependant'] == 0), 'household_profile'] = 'Single Adult'
+
+# 5. Single Parent (Single/Divorced/Widowed with children)
+df_active.loc[((df_active['status'] == 'single') | (df_active['status'] == 'divorced/widowed')) & (df_active['dependant'] >= 1), 'household_profile'] = 'Single Parent'
+
+# 6. Young Adult Household (Living with parents and siblings)
+df_active.loc[df_active['status'] == 'living with parents and siblings', 'household_profile'] = 'Young Adult Household'
+
+# Fill in the rest that you may have accidentally missed
+df_active['household_profile'] = df_active['household_profile'].fillna('Other')
+
+# Verify results
+print("Household Profile Distribution:")
+print(df_active['household_profile'].value_counts(dropna = False))
