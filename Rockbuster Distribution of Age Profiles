@@ -1,0 +1,8 @@
+# 5.1 Create age category
+df_active.loc[df_active['age'] <= 35, 'age_profile'] = 'Young Adult'
+df_active.loc[(df_active['age'] > 35) & (df_active['age'] < 65), 'age_profile'] = 'Middle-Aged'
+df_active.loc[df_active['age'] >= 65, 'age_profile'] = 'Senior'
+
+# Verify the results
+print("Age Profile Distribution:")
+print(df_active['age_profile'].value_counts(dropna = False))
