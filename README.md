@@ -30,6 +30,10 @@ This is where data mining, predictive analytics, and time-series analysis and fo
 
 Finally, the data analyst needs to understand GitHub. Not only is GitHub the standard for any data analyst portfolio, but it’s also a great way for analysts to collaborate on projects and learn from others in the industry. What’s more, displaying your SQL and Python skills on GitHub will impress future employers and serve as proof that you have the skills they require when applying for jobs.
 
+# Visualization
+
+[Lihat Visualisasi Interaktif di Tableau Public](https://public.tableau.com/app/profile/johannes.wuisan/viz/RockbusterDistributionofAgeProfiles/Sheet1?publish=yes)
+
 
 
 
